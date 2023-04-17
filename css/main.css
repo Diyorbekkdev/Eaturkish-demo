@@ -1752,7 +1752,7 @@ ul {
 @media only screen and (max-width: 390px) {
   .dining .dining_container .dining_left a {
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto;
   }
 }
 .dining .dining_container .dining_left a:hover {
@@ -1827,7 +1827,6 @@ ul {
   background: #ffffff;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
   padding: 10px;
   border-radius: 14px;
   width: 300px;
@@ -2016,7 +2015,6 @@ ul {
   background: #ffffff;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
   padding: 10px;
   width: 100%;
   background: #ffffff;

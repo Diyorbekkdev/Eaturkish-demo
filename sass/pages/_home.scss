@@ -107,7 +107,7 @@ ul {
         transition: 0.3s ease;
         @include media(390px) {
           text-align: center;
-          margin: 0 auto;
+          margin: 20px auto;
         }
         &:hover {
           box-shadow: inset 2px 2px 6px #e2e4ea;
@@ -191,7 +191,7 @@ ul {
     background: #ffffff;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    // margin: 10px;
     padding: 10px;
     // border: 1px solid black;
     border-radius: 14px;
@@ -379,7 +379,7 @@ ul {
       background: #ffffff;
       flex-direction: column;
       align-items: center;
-      margin: 10px;
+      // margin: 10px;
       padding: 10px;
       width: 100%;
       background: #ffffff;
