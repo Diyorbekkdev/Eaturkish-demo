@@ -1,0 +1,151 @@
+@use "variables";
+
+@function calculateRem($size) {
+  @return calc($size / $rem-base) * 1rem;
+}
+
+// HEADINGLAR UCHUN
+@mixin heading($heading) {
+  $font-sizes: (
+    h1: 54px,
+    h2: 48px,
+    h3: 38px,
+    h4: 36px,
+    h5: 32px,
+    h6: 24px,
+  );
+
+  $line-heights: (
+    h1: 74px,
+    h2: 64px,
+    h3: 56px,
+    h4: 56px,
+    h5: 48px,
+    h6: 36px,
+  );
+
+  font-weight: 600;
+  font-size: calculateRem(map-get($font-sizes, $heading));
+  line-height: calculateRem(map-get($line-heights, $heading));
+  letter-spacing: -0.01em;
+  color: $dark;
+}
+
+@mixin label($label) {
+  $font-sizes: (
+    label1: 18px,
+    label2: 16px,
+  );
+
+  $line-heights: (
+    label1: 32px,
+    label2: 28px,
+  );
+
+  font-weight: 500;
+  font-size: calculateRem(map-get($font-sizes, $label));
+  line-height: calculateRem(map-get($line-heights, $label));
+}
+
+@mixin label($body) {
+  $font-sizes: (
+    body1: 16px,
+    body2: 16px,
+  );
+
+  $line-heights: (
+    body1: 28px,
+    body2: 28px,
+  );
+
+  font-weight: 400;
+  font-size: calculateRem(map-get($font-sizes, $label));
+  line-height: calculateRem(map-get($line-heights, $label));
+  color: $dark;
+}
+
+@mixin button($background-color, $text-color, $padding-y, $padding-x) {
+  display: inline-block;
+  padding: $padding-y $padding-x;
+  border-radius: 40px;
+  background-color: $background-color;
+  color: $text-color;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: #fde4a6;
+    color: #1b1c2b;
+  }
+}
+// MAIN TITLE
+
+@mixin main_title {
+  font-family: "Cera Round Pro";
+  font-weight: 700;
+  font-size: 5.625rem;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+@mixin nav_style() {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+@mixin sub_info {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 175%;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+@mixin dining_btn {
+  @include sub_info();
+  padding: 8px 32px;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+}
+
+@mixin media($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+.btn_hover {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.btn_hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fde4a6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.btn_hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

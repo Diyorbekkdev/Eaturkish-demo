@@ -1,0 +1,99 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.news {
+  &_title {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &_container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    @include media(1000px) {
+      grid-template-columns: 1fr;
+      .card {
+        display: none;
+      }
+      .alohida {
+        margin-top: 20px;
+        flex-basis: 100%;
+        .update_btn{
+            margin-top: 20px;
+        }
+      }
+    }
+    .alohida {
+      display: none;
+      @include media(1000px) {
+        display: block;
+      }
+      img {
+        border-radius: 0px 0px 14px 0;
+      }
+      .card-title {
+        color: #141414;
+      }
+    }
+    .card {
+      width: 100%;
+      border-radius: 14px;
+      h5 {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: capitalize;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #242424;
+      }
+      p {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #aaaaaa;
+      }
+      .update_btn {
+        background: none;
+        color: #bb2339;
+        border: none;
+      }
+    }
+  }
+  &_btn_view {
+    margin-top: 78px;
+    margin-bottom: 78px;
+    text-align: center;
+    .news_btn {
+      padding: 8px 32px;
+      font-family: "Cera Round Pro";
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 175%;
+      letter-spacing: 0.04em;
+      color: #242424;
+      border: 1px solid #bb2339;
+      border-radius: 100px;text-decoration: none;
+      &:hover {
+        transition: 0.3s ease-out;
+        border: 1px solid #333333 !important;
+        box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+          0 -6px 4px #fefefe, inset 0 0 3px 3px #cecfd1;
+      }
+      &:active {
+        border: 1px solid #333333 I !important;
+        box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+          0 -6px 4px #fefefe, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+      }
+      &:focus {
+        border: 1px solid #333333 I !important;
+        box-shadow: 0 4px 3px 1px #fcfcfc, 0 6px 8px #d6d7d9, 0 -4px 4px #cecfd1,
+          0 -6px 4px #fefefe, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+      }
+    }
+  }
+}

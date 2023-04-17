@@ -1,0 +1,51 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.about_container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.about {
+    .about_right, .about_left{
+        display: none;
+    }
+  &_container {
+    .about_title {
+        z-index: 2;
+      text-align: center;
+      h2 {
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 130%;
+      }
+    }
+    .about_content {
+        z-index: 2;
+      margin-top: 40px;
+      p {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.04em;
+        color: #242424;
+        opacity: 0.8;
+      }
+      img{
+        width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+    }
+}
+}
+.a_shadow{
+    display: none;
+}
+.s_about{
+    position: absolute;
+    right: 300px;
+  }
+}

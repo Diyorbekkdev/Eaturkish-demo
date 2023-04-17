@@ -1,0 +1,181 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.breadcrumb {
+  margin-top: 130px;
+  li {
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+    font-feature-settings: "tnum" on, "lnum" on;
+    color: #b0b0b0;
+}
+.breadcrumb-item.active {
+    color: $red;
+}
+}
+
+.pack {
+  .pack_container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 294px;
+    @include media(644px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .head_tab {
+      padding: 50px 40px;
+      background: $red;
+      width: 55%;
+      max-height: 800px;
+      border-radius: 20px;
+      @include media(644px){
+        width: 100%;
+      }
+      h2 {
+        margin-bottom: 50px;
+        font-family: "Cera Round Pro";
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 54px;
+        text-transform: capitalize;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #ffffff;
+      }
+    }
+    .df_tab {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @include media(644px){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .tab_link {
+      padding: 10px 20px;
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 175%;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      border: 1px solid #ffffff;
+      border-radius: 100px;
+      transition: 0.3s ease-out;
+      // color: #fff;
+      outline: none;
+      @include media(644px){
+        border: none;
+        text-decoration: underline;
+        color: rgba(60, 0, 255, 0.785);
+      }
+    }
+    .active-tab {
+      transition: 0.5s;
+      color: #000000 !important;
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      border-radius: 100px;
+      @include media (644px){   
+        background: none;
+        text-decoration: dotted;
+        border: none;
+        font-weight: bold;
+        color: rgb(64, 3, 121) !important;
+      }
+    }
+    .tab_container {
+      width: 100%;
+    }
+    .ap-tab-container {
+      .ap-tab-content {
+        display: block;
+        margin-right: 20px;
+        .row_card {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          justify-content: space-between;
+          @include media (768px){
+            grid-template-columns: 1fr;
+          }
+        }
+        .stars {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin: 10px 0;
+        }
+
+        .star {
+          color: gray;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        .star.filled {
+          color: gold;
+        }
+        .card_c {
+          display: flex;
+          background: #ffffff;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+          padding: 10px;
+          width: 100%;
+          background: #ffffff;
+          border: 1px solid rgba(36, 36, 36, 0.1);
+          border-radius: 14px;
+          .price {
+            font-family: "Open Sans";
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: center;
+            color: #bb2339;
+          }
+          p {
+            font-family: "Open Sans";
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #242424;
+          }
+          img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+          }
+          p {
+            margin: 5px 0;
+          }
+          transition: 0.3s ease-out;
+        }
+        .card_c:hover {
+          transition: 0.3s ease-out;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

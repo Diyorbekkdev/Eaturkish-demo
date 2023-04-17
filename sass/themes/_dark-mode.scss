@@ -1,0 +1,614 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+:root {
+  --bg-color: linear-gradient(155.28deg, #383638 2.06%, #0b0b0b 33.08%);
+  --btn-color: #3858d6;
+  --primary--text-color: #1e1d1d;
+  --secondary-text-color: #8b8e99;
+  --card-bg-color: #f6f6f6;
+  --container-width: 1102px;
+
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-black-700: #504e70;
+}
+
+body.dark {
+  --bg-color: linear-gradient(155.28deg, #383638 2.06%, #0b0b0b 33.08%);
+  --primary--text-color: #1e1d1d;
+  --secondary-text-color: #8b8e99;
+  --card-bg-color: #f6f6f6;
+  --container-width: 1102px;
+
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-900: #ffffff;
+  --text-black-700: #e9e9e9;
+}
+
+body.dark {
+  .header {
+    background: url("../../assets/images/home/ofvanvas-bg.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .bg_t {
+      @include media(730px) {
+        background: transparent;
+        margin: -20px 0;
+      }
+    }
+  }
+  .dishes {
+    background: url("../../assets/images/home/ofvanvas-bg.svg");
+  }
+  .dishes_container {
+    padding-top: 500px;
+    @include media(650px) {
+      padding-top: 200px;
+    }
+    h1 {
+      color: var(--skin-color);
+    }
+    .card_c {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(95, 94, 94, 0.3);
+      p {
+        color: #fff;
+      }
+      .price {
+        color: var(--skin-color);
+      }
+    }
+    .owl-prev,
+    .owl-next {
+      @media (max-width: 380px) {
+        display: none;
+      }
+      color: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(95, 94, 94, 0.3);
+    }
+  }
+}
+
+// first section dark mode
+body.dark {
+  .video-slider {
+    display: block;
+    padding-bottom: 100px;
+  }
+  .dining {
+    background: none;
+    position: relative;
+    &_container {
+      @include media(650px) {
+        padding-bottom: 0;
+      }
+    }
+    .hero_img {
+      display: none;
+    }
+    .dining_left {
+      //   text-align: center;
+      margin: 0 auto;
+      padding: 20px;
+      position: absolute;
+      z-index: 10;
+      top: 150px;
+      @include media(935px) {
+        top: 300px;
+        // transform: translateX(-20px);
+      }
+      max-width: 1200px;
+      // width: 82%;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      @include media(933px) {
+        width: 95%;
+      }
+      .dining_info {
+        color: #fff;
+        color: var(--skin-color);
+      }
+      h1 {
+        color: var(--skin-color);
+      }
+      .sub_info {
+        // text-align: center;
+        width: 90%;
+        // margin: 0 auto;
+      }
+      .dining_btn {
+        color: var(--skin-color);
+      }
+    }
+  }
+}
+
+body.dark {
+  .tab {
+    background: url("../../assets/images/home/ofvanvas-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &_title {
+      h2 {
+        color: var(--skin-color);
+      }
+    }
+    .ap-tab-link {
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .ap-tab-link.active-tab {
+      background: #4261dc;
+    }
+    .card_custom {
+      .card_c {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(9.2px);
+        border: 1px solid rgba(38, 37, 37, 0.3);
+        cursor: pointer;
+        transition: 0.3s ease-out;
+      }
+      p {
+        color: #fff;
+      }
+      .price {
+        color: var(--skin-color);
+      }
+      .card_c:hover {
+        transition: 0.3s ease-out;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+body.dark {
+  .customer {
+    background: #000;
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev {
+      background: #9aaae9;
+      border: none;
+    }
+    &_title {
+      h2,
+      p {
+        color: var(--skin-color);
+      }
+      img {
+        filter: invert(1);
+      }
+    }
+    .square {
+      background: #000;
+    }
+    .card_customer {
+      background: rgba(152, 150, 150, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(92, 90, 90, 0.3);
+      h3 {
+        color: var(--skin-color);
+      }
+      p {
+        color: #fff;
+      }
+      span {
+        color: var(--skin-color);
+      }
+    }
+  }
+}
+
+body.dark {
+  .update {
+    background: url("../../assets/images/home/ofvanvas-bg.svg");
+    .update_title {
+      p,
+      h2 {
+        color: var(--skin-color);
+      }
+      img {
+        filter: invert(1);
+      }
+    }
+    &_card_container {
+      .card {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(9.2px);
+        border: 1px solid rgba(95, 94, 94, 0.3);
+        h5 {
+          color: var(--skin-color);
+        }
+      }
+    }
+    .btn_v {
+      border: 1px solid #000 !important;
+      color: #3858d6;
+      &:hover {
+        transition: 0.3s ease-out;
+        border: 1px solid #333333 !important;
+        box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+          0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+      }
+      &:active {
+        box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+          0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+      }
+      &:focus {
+        box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+          0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+      }
+    }
+  }
+}
+
+body.dark {
+  .photo_to {
+    background: url("../../assets/images/home/ofvanvas-bg.svg");
+    &_title {
+      background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.413),
+          rgba(0, 0, 0, 0.505)
+        ),
+        url("../../assets/images/home/fortitle.svg");
+      background-position: center center;
+      background-size: cover;
+      border-radius: 14px;
+      border-left: 2px solid #0aa5ff57;
+      border-top: 2px solid #0aa5ff5d;
+      padding: 25px;
+      .ins,
+      h3 {
+        color: var(--skin-color);
+      }
+      img {
+        filter: invert(1);
+      }
+    }
+    .dd {
+      padding: 25px;
+      border-left: 1px solid rgba(0, 0, 255, 0.221);
+      border-radius: 100px;
+      box-shadow: inset 2px 0px 0px rgba(0, 0, 255, 0.199);
+    }
+    .view-btn {
+      border: 1px solid #000 !important;
+      color: #3858d6;
+      &:hover {
+        transition: 0.3s ease-out;
+        border: 1px solid #333333 !important;
+        box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+          0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+      }
+      &:active {
+        box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+          0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+      }
+      &:focus {
+        box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+          0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+      }
+    }
+  }
+}
+
+body.dark {
+  background: url("../../assets/images/home/ofvanvas-bg.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .footer {
+    background: url("../../assets/images/home/ofvanvas-bg.svg");
+    .newsletter {
+      background: url("../../assets/images/home/bgfooter.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+// menu section dark mode
+body.dark {
+  .pack {
+    .pack_container {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      @include media(650px) {
+        display: flex !important;
+        flex-direction: column;
+      }
+      .tab-content {
+        display: block;
+      }
+      .head_tab {
+        background: transparent;
+        h2 {
+          color: var(--skin-color);
+        }
+        .df_tab {
+          // display: flex !important;
+          // flex-direction: row;
+          // justify-content: space-between;
+          .tab_link {
+            padding: 0;
+            border: none;
+            font-size: 15px;
+          }
+          .active-tab {
+            background: none;
+            color: #0854ec !important;
+            text-decoration-line: underline;
+          }
+        }
+      }
+      .ap-tab-content {
+        background: transparent;
+        border: none;
+        margin-right: 20px;
+      }
+      .row_card {
+        background: transparent !important;
+        .card_c {
+          background: transparent;
+          background: rgba(255, 255, 255, 0.071);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(9.2px);
+          -webkit-backdrop-filter: blur(9.2px);
+          border: 1px solid rgba(49, 49, 49, 0.3);
+          img {
+            transition: 0.3s ease-in;
+          }
+          &:hover {
+            transform: scale(1);
+            transition: 0.3s ease-in-out;
+            img {
+              transition: 0.3s ease-out;
+              transform: scale(1.09);
+            }
+          }
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// news section dark mode
+body.dark {
+  .news {
+    .news_title {
+      h2 {
+        color: var(--skin-color);
+      }
+      img {
+        filter: invert(1);
+      }
+    }
+    &_container {
+      .card {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(9.2px);
+        border: 1px solid rgba(35, 35, 35, 0.3);
+        .card-title {
+          color: var(--skin-color);
+        }
+      }
+      .alohida {
+        .n_t {
+          color: #ffffff2f;
+          opacity: 0.5;
+        }
+      }
+    }
+    &_btn_view{
+      .news_btn{
+        border: 1px solid #000 !important;
+        color: #3858d6;
+        &:hover {
+          transition: 0.3s ease-out;
+          border: 1px solid #333333 !important;
+          box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+            0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+        }
+        &:active {
+          box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+            0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+        }
+        &:focus {
+          box-shadow: 0 4px 3px 1px #0aa5ff, 0 6px 8px #0854ec, 0 -4px 4px #2367ef,
+            0 -6px 4px #21a7f9, inset 0 0 3px 3px #3277ff;
+        }
+      }
+    }
+  }
+}
+
+
+// contact dark
+body.dark{
+  .contact{
+    &_title{
+      h2{
+        color: var(--skin-color);
+      }
+      img{
+        filter: invert(1);
+      }
+    }
+    .s_card{
+      background: rgba(255, 255, 255, 0.084);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(35, 35, 35, 0.3);
+      i{
+        color: #fff;
+        background: #0aa5ffd5;
+      }
+      p{
+        color: var(--skin-color);
+      }
+      .tell{
+        color: #ccc;
+      }
+
+    }
+    form{
+      background: linear-gradient(to bottom, #0000003f, #1a1a1a59), url('../../assets/images/home/form-bg.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      // background: rgba(255, 255, 255, 0.084);
+      // border-radius: 16px;
+      // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      // backdrop-filter: blur(9.2px);
+      // -webkit-backdrop-filter: blur(9.2px);
+      // border: 1px solid rgba(35, 35, 35, 0.3);
+      h2{
+        color: var(--skin-color);
+      }
+      p{
+        color: #ccc;
+      }
+      input{
+        background: rgba(255, 255, 255, 0);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(171, 171, 171, 0.3) !important;
+      }
+      input::placeholder{
+        color: var(--skin-color);
+      }
+      textarea{
+        background: rgba(255, 255, 255, 0);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(9.2px);
+        border: 1px solid rgba(171, 171, 171, 0.3) !important;
+        color: var(--skin-color);
+      }
+    }
+  }
+}
+
+body.dark{
+  .map_title{
+    h2{
+      color: var(--skin-color);
+    }
+  }
+  .map{
+    background: none;
+  }
+  .map{
+    background: url('../../assets/images/home/dark-map.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+
+body.dark{
+  .about{
+    &_container{
+      .about_title{
+        h2{
+          color: var(--skin-color);
+        }
+        img{
+          filter: invert(1);
+        }
+      }
+    }
+    position: relative;
+    .about_right, .about_left{
+      display: block;
+    }
+    .about_left{
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: -200px;
+    }
+    .about_right{
+      position: absolute;
+      right: 0;
+      top: -250px;
+      z-index: -1;
+    }
+    .about_bg{
+      padding: 10px 15px;
+      background: rgba(255, 255, 255, 0.084);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(9.2px);
+      -webkit-backdrop-filter: blur(9.2px);
+      border: 1px solid rgba(35, 35, 35, 0.3);
+    }
+    .about_content{
+      p{
+        color: #ccc;
+      }
+    }
+  }
+  .a_shadow{
+    display: block;
+    position: absolute;
+    top: 1100px;
+    left: 700px;
+    z-index: -2;
+  }
+  .s_about{
+    position: absolute;
+    right: 300px;
+  }
+  
+}
