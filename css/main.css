@@ -1652,7 +1652,7 @@ ul {
 }
 .dining .dining_container .hero_img {
   transform: translateX(150px);
-  width: 59%;
+  width: 57%;
 }
 @media only screen and (max-width: 950px) {
   .dining .dining_container .hero_img {
@@ -2118,6 +2118,7 @@ ul {
   .customer .owl-theme .owl-dots,
   .customer .owl-theme .owl-nav {
     display: block;
+    padding-bottom: 20px;
   }
   .customer .owl-theme .owl-dots .owl-dot,
   .customer .owl-theme .owl-nav .owl-dot {

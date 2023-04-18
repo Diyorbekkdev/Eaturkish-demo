@@ -50,7 +50,7 @@ ul {
 
     .hero_img {
       transform: translateX(150px);
-      width: 59%;
+      width: 57%;
       @include media(950px) {
         transform: translateX(50px);
         width: 60%;
@@ -255,6 +255,7 @@ ul {
     -webkit-tap-highlight-color: transparent;
     @include media(2000px) {
       display: block;
+
     }
     .owl-prev {
       padding: 0 10px !important;
@@ -335,6 +336,7 @@ ul {
         border: 1px solid #bb2339;
         border-radius: 100px;
         transition: 0.3s ease-out;
+        // background: transparent;
         // color: #fff;
         outline: none;
       }
@@ -478,6 +480,7 @@ ul {
     font-size: 20px;
     @include media(2000px) {
       display: block;
+      padding-bottom: 20px;
       .owl-dot {
         display: none;
       }
